@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lomake</title>
+    <link rel="stylesheet" type="text/css" href="form copy.css">
+</head>
+<body>
+    <form>
+        <fieldset>
+        <div class="contact-info-form-group">
+            <h2>Contact information:</h2>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname">
+            <label>Preferred Contact method:</label><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname">
+            <input type="checkbox" id="email" name="email">
+            <label for="email">Email</label><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <input type="checkbox" id="telephone" name="telephone">
+            <label for="telephone">Telephone</label><br>
+            <label for="telephone">Telephone:</label>
+            <input type="text" id="telephone" name="telephone"><br>
+        </div>
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+        <div class="feedback-form-group">
+            <h2>Feedback:</h2>
+            <label for="message-subject">Message subject:</label>
+            <input type="text" id="message-subject" name="message-subject"><br>
+            <textarea rows="15" cols="50"></textarea><br>
+            <label for="file-upload">Attach a file:</label>
+            <button id="file-upload-btn">Choose File</button>
+            <label id="file-name-label">No file chosen</label>
+        </div>
+        <div class="form-group">
+            <button>Send</button>
+        </div>
+        </fieldset>
+    </form>
+</body>
+</html>
