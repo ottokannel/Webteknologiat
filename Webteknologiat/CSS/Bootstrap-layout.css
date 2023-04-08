@@ -1,1 +1,6 @@
-border-color: blue;
+div{
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    float: left;
+    display: grid;
+}
