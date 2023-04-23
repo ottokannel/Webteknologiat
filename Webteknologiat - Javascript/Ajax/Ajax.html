@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API-esimerkki</title>
+    <link rel="stylesheet" href="CSS/Ajax.css">
+  </head>
+  <body>
+    <div id="result"></div>
+    <button id="fetch-button">Hae tieto</button>
+    <div id="loading-animation">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_(wobbly).gif" alt="Loading">
+      </div>
+      <div id="result-container"></div>
+      <p>Hakuja yhteensä: <span id="counter"></span></p>
+    <script>
+      let searchCount = parseInt(localStorage.getItem('searchCount')) || 0;
+      const button = document.getElementById('fetch-button');
+      const result = document.getElementById('result');
+      const counter = document.getElementById('counter');
+      
+      counter.textContent = searchCount;
+
+      button.addEventListener('click', () => {
+        fetch('http://numbersapi.com/42')
+          .then(response => response.text())
+          .then(data => {
+            result.textContent = data;
+            searchCount++;
+            localStorage.setItem('searchCount', searchCount);
+            counter.textContent = searchCount;
+          })
+          .catch(error => console.error(error));
+      });
+    </script>
+  </body>
+</html>
